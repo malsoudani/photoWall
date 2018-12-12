@@ -1,4 +1,6 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import Main from './Components/Main';
+import ReactDOM from 'react-dom';
+import './styles/stylesheet.css';
 
-const element = React.createElement
+ReactDOM.render(<Main />, document.getElementById('root'));
