@@ -3,10 +3,15 @@ import reactDOM from 'react-dom';
 
 class Photo extends Component {
     render() {
-        return  <div>
-                    <img src={this.props.post.imageLink} alt={this.props.post.description} id={this.props.post.id}></img>
-                </div>
-    }
+        const post = this.props.post;
+        return  <figure className="figure">
+                    <img className="photo" src={post.imageLink} alt={post.description} id={post.id}></img>
+                    <figcaption><p> {post.description} </p></figcaption>
+                    <div className="button-container">
+                        <button className="remove-button">Remove</button>
+                    </div>
+                </figure>
+            }
 }
 
 export default Photo;
