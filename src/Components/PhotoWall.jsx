@@ -4,9 +4,12 @@ import PropTypes from 'prop-types';
 
 class PhotoWall extends Component {
     render() {
-        return  <div className="photo-grid">
-                    {this.props.posts.map((post, index) => <Photo key={index} post={post} onRemovePhoto={this.props.onRemovePhoto}/>)}
-                </div>
+        return <div>
+            <button className="addIcon" onClick={() => {this.props.onScreenSwitch('addPhoto')}}> + </button>
+            <div className="photo-grid">
+                {this.props.posts.map((post, index) => <Photo key={index} post={post} onRemovePhoto={this.props.onRemovePhoto}/>)}
+            </div>
+        </div>
     }
 }
 
