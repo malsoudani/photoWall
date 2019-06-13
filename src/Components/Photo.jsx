@@ -8,7 +8,7 @@ class Photo extends Component {
                     <img className="photo" src={post.imageLink} alt={post.description} id={post.id}></img>
                     <figcaption><p> {post.description} </p></figcaption>
                     <div className="button-container">
-                        <button className="remove-button">Remove</button>
+                        <button className="remove-button" onClick = {() => {this.props.onRemovePhoto(post)}}>Remove</button>
                     </div>
                 </figure>
             }
